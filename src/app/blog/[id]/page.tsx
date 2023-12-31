@@ -33,11 +33,11 @@ const BlogDetailPage: FC<BlogDetailPageProps> = async ({params}) => {
         <div>
             <BackButton />
             <div className="mb-8">
-                <h2 className="text-2xl font-bold my-4">{post.title}</h2>
+                <h2 className="text-2xl font-bold my-4">{post?.title}</h2>
                 <ButtonAction id={params.id}/>
             </div>
-            <div className="badge badge-accent">{post.Tag.name}</div>
-            <p className='text-slate-700'>{post.content}</p>
+            <div className="badge badge-accent">{post?.Tag.name}</div>
+            <p className='text-slate-700'>{post?.content}</p>
         </div>
     )
 }
