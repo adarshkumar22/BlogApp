@@ -19,10 +19,9 @@ interface FormPostProps {
 
 // FC = functional component
 const FormPost: FC<FormPostProps> = ({submit, isEditing, initialValue}) => {
-  const { register, handleSubmit } = useForm<FormPostProps>({
-    defaultValues: { 
-      initialValue
-    }
+  const { register, handleSubmit } = useForm<FormInputPost>({
+    defaultValues:  initialValue
+
   });
   // const submit = (data) => console.log(data);
 
