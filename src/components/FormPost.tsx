@@ -14,13 +14,15 @@ import { Tag } from "@prisma/client";
 interface FormPostProps {
     submit: SubmitHandler<FormInputPost>;
     isEditing: boolean;
-    initialValue?: FormInputpost;
+    initialValue?: FormInputPost;
 }
 
 // FC = functional component
 const FormPost: FC<FormPostProps> = ({submit, isEditing, initialValue}) => {
   const { register, handleSubmit } = useForm<FormPostProps>({
-    defaultValues: initialValue
+    defaultValues: { 
+      initialValue
+    }
   });
   // const submit = (data) => console.log(data);
 
