@@ -1,0 +1,7 @@
+npm i prisma --save-dev
+npx prisma init
+Build the schema
+npx prisma migrate dev --name init (init is just the name)
+npm install @prisma/client
+npx prisma db push
+npx prisma generate
