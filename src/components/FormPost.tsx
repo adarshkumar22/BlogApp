@@ -84,9 +84,9 @@ const FormPost: FC<FormPostProps> = ({submit, isEditing, initialValue, isLoading
         }
         {
           isEditing ? (
-            isLoadingSubmit ? 'Updating...' : 'Update'
+           'Update'
           ) : (
-            isLoadingSubmit ? 'Creating...' : 'Create'
+            'Create'
           ) 
         }
       </button>
