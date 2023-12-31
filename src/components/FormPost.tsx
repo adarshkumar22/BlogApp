@@ -15,11 +15,10 @@ interface FormPostProps {
     submit: SubmitHandler<FormInputPost>;
     isEditing: boolean;
     initialValue?: FormInputpost;
-    isLoadingSubmit: boolean;
 }
 
 // FC = functional component
-const FormPost: FC<FormPostProps> = ({submit, isEditing, initialValue, isLoadingSubmit}) => {
+const FormPost: FC<FormPostProps> = ({submit, isEditing, initialValue}) => {
   const { register, handleSubmit } = useForm<FormPostProps>({
     defaultValues: initialValue
   });
@@ -78,10 +77,6 @@ const FormPost: FC<FormPostProps> = ({submit, isEditing, initialValue, isLoading
         className="btn btn-primary w-full"
         style={{ color: "white", background: "blue" }}
       >
-        {isLoadingSubmit && 
-          <span className='loading loading-spinner loading-large'></span>
-        
-        }
         {
           isEditing ? (
            'Update'
